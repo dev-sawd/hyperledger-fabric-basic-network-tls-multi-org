@@ -10,7 +10,7 @@ rm -rf ./config
 mkdir config
 rm -rf crypto-config
 
-export PATH=$HOME/fabric-samples/bin:$PATH
+export PATH=./bin:$PATH
 cryptogen generate --config=./crypto-config.yaml
 
 configtxgen -profile OneOrgOrdererGenesis -outputBlock ./config/genesis.block
